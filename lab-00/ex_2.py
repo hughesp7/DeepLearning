@@ -17,14 +17,24 @@ import math
 # or runs for more than 100 iterations.
 
 def find_root(f, df, x0):
-    return 0  # You can delete this line
-# i = 0
-# x = x0
-# while True:
-# derivative = df(x)
+    i = 0
+    x = x0
+    while True:
+        derivative = df(x)
+        if(derivative == 0):
+            return None
 # < check if derivative is 0, print a message and return if so >
+        next_x = x - (f(x)/derivative)
 # next_x = < compute using Newton-Raphson formula >
-# print("{} - {}".format(i, x))
+        print("{} - {}".format(i, x))
+        if(abs(next_x - x) < 0.0001):
+            return x
+        else:
+            x = next_x
+            i = i + 1
+            if( i > 100):
+                print("Too many iterations")
+                return None
 # if < insert expression to compute absolute difference of x and next_x > < 0.0001:
 # return x
 # <update x>
