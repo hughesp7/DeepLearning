@@ -32,11 +32,11 @@ def polynomial_design_matrix(x, order=1):
 
     # Hint:
     # Outer loop: iterating over columns; each column gets a higher power
-    # for p in range(0, order+1):
+    for p in range(0, order+1):
     # Inner loop: iterating over rows: each row corresponds to an element of 'x'
-    # for i in range(x.size):
+        for i in range(x.size):
     # Element (i,p) of X should be the ith element of 'x' to the power p:
-    X[i,p] = <something>
+            X[i,p] = x[i]**p;
 
     return X
 
