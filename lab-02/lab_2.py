@@ -102,7 +102,7 @@ def gradient(w, X, y):
 # What learning rate is best for the data set supplied in the notebook?
 
 def question_3():
-    return 0
+    return 1
 
 #
 # #### EXERCISE 4 ####
