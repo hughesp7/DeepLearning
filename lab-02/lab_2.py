@@ -122,4 +122,4 @@ def predict_class(w, X, t):
 # What is the accuracy of your classifier for a threshold of 0.5
 
 def question_5():
-    return 0
+    return 0.9725
