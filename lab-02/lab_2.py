@@ -110,8 +110,8 @@ def question_3():
 # Write a function predict_class which uses weights 'w', observations
 # 'X', and a threshold 't' to classify the data.
 def predict_class(w, X, t):
-    a = np.exp( predict (w, X) )/np.sum(np.exp( predict (w, X) ) )# replace with a vector of comparisons of a call to predict with 't':
-    return predict(t, a)
+    Z = predict(w, X) > t# replace with a vector of comparisons of a call to predict with 't':
+    return Z
     #return np.zeros((X.shape[0],1))
 
 #
